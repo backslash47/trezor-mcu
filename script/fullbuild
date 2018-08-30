@@ -8,7 +8,7 @@ set -eu
 cd "$(dirname "$0")/.."
 
 readonly ARTIFACT_EXTENSIONS=(bin elf)
-readonly BUILD_DIR="$(readlink -f build)"
+readonly BUILD_DIR="$(greadlink -f build)"
 
 readonly BOOTLOADER_DIR="$BUILD_DIR/bootloader"
 readonly BOOTLOADER_FILENAME="bootloader/bootloader.bin"

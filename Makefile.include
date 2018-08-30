@@ -65,8 +65,9 @@ CFLAGS   += $(OPTFLAGS) \
             $(CPUFLAGS) \
             $(FPUFLAGS) \
             -DSTM32F2 \
-            -DCONFIDENTIAL='__attribute__((section("confidential")))' \
+            -DCONFIDENTIAL='' \
             -DRAND_PLATFORM_INDEPENDENT=1 \
+            -D_FORTIFY_SOURCE=0 \
             -I$(TOOLCHAIN_DIR)/include \
             -I$(TOP_DIR) \
             -I$(TOP_DIR)gen \
